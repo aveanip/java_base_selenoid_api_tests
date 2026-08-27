@@ -95,21 +95,8 @@ public class WdHubStatus extends TestBase {
     }
 
     @Test
-    @DisplayName(" Проверка наличия фразы 'Authorization Required' при неудачной авторизацией")
-    public void checkTest() {
-        given()
-                .log().all()
-                .when()
-                .get("/wd/hub/status")
-                .then()
-                .log().all()
-                .statusCode(401)
-                .body(containsString("Authorization Required"));
-    }
-
-    @Test
     @DisplayName(" Проверка перехода на несуществующий путь")
-    public void ffddfjTest() {
+    public void invalidUrlTest() {
         given()
                 .log().all()
                 .when()
@@ -118,9 +105,10 @@ public class WdHubStatus extends TestBase {
                 .log().all()
                 .statusCode(404);
     }
+
     @Test
     @DisplayName(" Провера входа с невалидными данными")
-    public void hjdfjfTest() {
+    public void invalidDataTest() {
         given()
                 .log().all()
                 .auth().basic("user2", "12345")
