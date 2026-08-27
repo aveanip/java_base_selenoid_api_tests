@@ -107,7 +107,7 @@ public class WdHubStatus extends TestBase {
     }
 
     @Test
-    @DisplayName(" Провера входа с невалидными данными")
+    @DisplayName(" Проверка входа с невалидными данными")
     public void invalidDataTest() {
         given()
                 .log().all()
