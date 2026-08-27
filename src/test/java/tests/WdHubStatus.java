@@ -71,7 +71,7 @@ public class WdHubStatus extends TestBase {
 
     @Test
     @DisplayName("Проверка статуса ответа 401")
-    public void unauthorizedStatusTest() {
+    public void unauthorizedStatusCodeTest() {
         given()
                 .log().all()
                 .when()
